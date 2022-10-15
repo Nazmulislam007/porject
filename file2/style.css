@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg: hsl(0deg 0% 7%);
+  --c-bg: hsl(0deg 0% 12%);
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: var(--c-bg);
+  width: 400px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header {
+  color: white;
+  padding: 3rem 2rem 1.5rem;
+}
+
+.header > p {
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.header > span {
+  font-size: 14px;
+  color: gainsboro;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  font-size: 1.25em;
+  color: white;
+  background-color: hsl(264deg 100% 64%);
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: rgb(136, 57, 255);
+}
+
+.inputfile + label {
+  cursor: pointer; /* "hand" cursor */
+}
+
+.loader {
+  display: none;
+}
+
+.loader.loader-active {
+  display: flex;
+  margin-bottom: 2px;
+  margin-left: 6px;
+}
+
+.result .file {
+  font-size: 1.25em;
+  margin-top: 9px;
+  color: white;
+  border: 1px solid rgb(108, 108, 108);
+  background-color: hsl(0deg 0% 16%);
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  width: 100%;
+}

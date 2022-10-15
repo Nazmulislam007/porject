@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zilla Slab", serif;
+}
+
+:root {
+  --bg: hsl(0deg 0% 7%);
+  --c-bg: hsl(0deg 0% 12%);
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  position: relative;
+}
+
+.main {
+  color: white;
+  font-size: 6rem;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  background: var(--c-bg);
+  max-width: 400px;
+  width: 100%;
+  /* margin: 0 2rem; */
+  position: absolute;
+  box-shadow: 0 0 0 2px #929292;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+}
+
+.wrapper {
+  display: none;
+}
+.wrapper.wrapper-active {
+  display: block;
+}
+
+.download-file {
+  font-size: 1.25em;
+  color: white;
+  background-color: hsl(264deg 100% 64%);
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.download-file span {
+  margin-bottom: -4px;
+  margin-left: 10px;
+}
+
+.result .file {
+  font-size: 1.25em;
+  margin-top: 9px;
+  color: white;
+  border: 1px solid rgb(108, 108, 108);
+  background-color: hsl(0deg 0% 16%);
+  padding: 0.7rem 1.3rem;
+  border-radius: 10px;
+  width: 100%;
+  display: none;
+  cursor: pointer;
+}
+
+.loader.loader-active {
+  display: none;
+}
+
+.loader {
+  display: flex;
+  margin-bottom: 2px;
+  margin-left: 6px;
+}
+
+.download-btn {
+  font-size: 1.25em;
+  box-shadow: 0 0 0 2px #c5c5c5;
+  color: white;
+  background-color: hsl(264deg 100% 64%);
+  padding: 0.8rem 1.3rem;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 0.8rem;
+  width: 100%;
+  background: #0b0b0b;
+  color: white;
+}
+
+@media screen and (max-width: 769px) {
+  .main {
+    font-size: 4rem;
+  }
+  .container {
+    margin: 0 0rem;
+    width: 95%;
+    padding: 12px;
+  }
+  .download-btn {
+    font-size: 1rem;
+  }
+
+  .download-file {
+    font-size: 1rem;
+  }
+
+  .result .file {
+    font-size: 1rem;
+  }
+}
